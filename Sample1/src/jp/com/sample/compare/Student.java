@@ -1,6 +1,6 @@
 package jp.com.sample.compare;
 
-public class Student {
+public class Student implements Comparable<Object> {
 
 	int id;
 	String name;
@@ -33,5 +33,10 @@ public class Student {
 	 */
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		return 0;
 	}
 }
