@@ -1,10 +1,24 @@
 package jp.com.sample;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
 public class Iterate {
+	
+	class Student {
+		
+		Student students = new Student();
+		
+		public void add(Student student) {
+			students.add(student);
+		}
+		
+		public Student getStudents() {
+			return students;
+		}
+	}
 
 	public static void main(String[] args) {
 
@@ -52,11 +66,17 @@ public class Iterate {
 
 		// 値の検索
 		System.out.println(scores.containsValue(70));*/
-
+		
 		// ラムダ式
 		// ストリーム
 		List<String> list2 = Arrays.asList("Takayuki", "Haruka", "Tsuyoshi");
 		Stream<String> stream = list2.stream();
 		stream.forEach(System.out::println);
+		
+		// flatMap
+		List<Student> students = new ArrayList<>();
+		
+		// 点数情報を格納
+		
 	}
 }
