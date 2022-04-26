@@ -1,17 +1,14 @@
 package jp.com.sample;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
+import java.util.stream.Stream;
 
 public class Iterate {
 
 	public static void main(String[] args) {
 
-		List<String> list = new ArrayList<>(Arrays.asList("Takayuki", "Haruka", "Tsuyoshi"));
+		/*List<String> list = new ArrayList<>(Arrays.asList("Takayuki", "Haruka", "Tsuyoshi"));
 
 		for (Iterator<String> iterator = list.iterator(); iterator.hasNext();) {
 			String element = iterator.next();
@@ -54,8 +51,12 @@ public class Iterate {
 		System.out.println(scores.containsKey("Takayuki"));
 
 		// 値の検索
-		System.out.println(scores.containsValue(70));
+		System.out.println(scores.containsValue(70));*/
 
-
+		// ラムダ式
+		// ストリーム
+		List<String> list2 = Arrays.asList("Takayuki", "Haruka", "Tsuyoshi");
+		Stream<String> stream = list2.stream();
+		stream.forEach(System.out::println);
 	}
 }
